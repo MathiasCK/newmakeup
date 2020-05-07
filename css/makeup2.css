@@ -1,0 +1,177 @@
+/*
+-------
+General
+-------
+*/
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+
+}
+
+.italic {
+  font-style: italic;
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
+.text-small {
+  font-size: 0.9rem;
+}
+
+section {
+  padding: 150px 0;
+}
+
+@media (max-width: 767.98px) {
+  section {
+    padding: 60px 0;
+  }
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: #000;
+  z-index: 2;
+  opacity: 0.6;
+}
+
+/*
+-----------
+General end
+-----------
+*/
+
+
+
+/* 
+-------------
+Intro section
+-------------
+*/
+
+.intro {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    background-color: #111;
+    min-height: 1000px;
+    padding: 0;
+    background-size: cover;
+    background-position: center center;
+    overflow: hidden;
+    background-attachment: fixed;
+  }
+  
+  .intro h1,
+  .intro h2,
+  .intro h3,
+  .intro p {
+    color: #fff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+  }
+  
+  .intro p {
+    font-size: 1.35rem;
+  }
+  
+  .content {
+    position: relative;
+    width: 100%;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    z-index: 10;
+  }
+  
+  @media (max-width: 767.98px) {
+    .content {
+      position: relative;
+      padding: 80px 0;
+      top: 0;
+      -webkit-transform: translate(0, 0);
+      transform: translate(0, 0);
+    }
+  }
+
+  .heading {
+    margin-bottom: 40px;
+  }
+
+  /* 
+  -----------------
+  Intro section end
+  -----------------
+   */
+
+
+
+  /*
+  -------
+   Navbar 
+  -------
+   */
+
+  nav.navbar {
+    background: #fff;
+    padding-top: 0;
+    padding-bottom: 0;
+    -webkit-box-shadow: 0 1px 0 #ddd;
+    box-shadow: 0 1px 0 #ddd;
+  }
+
+  nav.navbar .a.nav-link {
+    position: relative;
+    top: 1px;
+    color: red;
+    font-style: italic;
+    border-bottom: 1px solid transparent;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  nav.navbar 
+  a.nav-link.active,
+  nav.navbar a.nav-link:hover,
+  nav.navbar a.nav-link:focus {
+    color: #333;
+  }
+
+  nav.navbar a.nav-link.active {
+    border-bottom: 1px solid red;
+  }
+
+  nav.navbar .navbar-brand {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  nav.navbar.sticky {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #fff;
+    z-index: 999;
+  }
+
+  
+
+  /* 
+  ----------
+  Navbar end 
+  ----------
+  */
