@@ -1,0 +1,553 @@
+/*
+-------
+General
+-------
+*/
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+hr {
+  width: 90%;
+}
+
+/*
+-------
+Section
+-------
+*/
+
+section {
+  padding: 50px 0;
+  display: block;
+}
+
+@media (max-width: 767.98px) {
+  section {
+    padding: 60px 0;
+  }
+}
+
+
+.section-content {
+  padding-left: 5%;
+}
+
+.page-Section {
+  color: #000;
+  background: #fff;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.mainHead {
+  font-family: Playfair Display ;
+}
+
+
+.mainHead:after {
+  content: " ";
+  display: block;
+  width: 100px;
+  height: 1px;
+  margin: 20px 0 20px;
+  background: #e7a399;
+}
+
+
+.page-section-heading {
+  font-size: 3rem;
+  line-height: 2rem;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+/*
+-------
+Display
+-------
+*/
+
+.d-flex {
+  display: flex !important;
+}
+
+.d-grid {
+  display: grid !important;
+}
+
+/*
+-------
+Center
+-------
+*/
+
+.align-items-center {
+  align-items: center !important;
+}
+
+.justify-content-center {
+  justify-content: center !important;
+}
+
+/*
+-------
+Text
+-------
+*/
+
+.italic {
+  font-style: italic;
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
+.text-small {
+  font-size: 0.9rem;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-white {
+  color: #fff !important;
+}
+
+.text-uppercase {
+  text-transform: uppercase !important;
+}
+
+.text-black {
+  color: #090302;
+}
+
+.text-pink {
+  color: #e7a399;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+p {
+  font-family: Playfair Display;
+  font-weight: 10;
+}
+
+/* 
+-------------
+Intro section
+-------------
+*/
+
+.intro {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    background-color: #111;
+    min-height: 1000px;
+    padding: 0;
+    background-size: cover;
+    background-position: center center;
+    overflow: hidden;
+    background-attachment: fixed;
+  }
+  
+  .intro h1,
+  .intro p {
+    color: #fff;
+  }
+  
+  .intro p {
+    font-size: 1.35rem;
+  }
+  
+  .content {
+    position: relative;
+    width: 100%;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    z-index: 10;
+  }
+  
+  @media (max-width: 767.98px) {
+    .content {
+      position: relative;
+      padding: 80px 0;
+      top: 0;
+      -webkit-transform: translate(0, 0);
+      transform: translate(0, 0);
+    }
+  }
+
+  .heading {
+    margin-bottom: 40px;
+  }
+
+  /*
+  -------
+   Navbar 
+  -------
+   */
+
+  nav.navbar {
+    background-color: #ffffff;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-bottom: 1px solid #e7a399;
+  }
+
+  .active {
+    color: #f2eeee;
+    border-bottom: 1px solid #e7a399;
+  }
+
+  a.nav-link:hover,
+  a.nav-link:focus {
+    color: black;
+    border-bottom: 1px solid #e7a399;
+  }
+
+  .nav-link {
+    color: #e7a399;
+  }
+
+  .sticky {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #090302;
+    z-index: 999;
+  }
+
+  p.social {
+    text-align: center;
+    margin-top: 20px;
+    padding: 5px;
+  }
+
+  p.social a {
+    margin: 0 10px 0 0;
+    color: #fff;
+    background-color: #e7a399;
+    display: inline-block;
+    width: 38px;
+    height: 38px;
+    border-radius: 19px;
+    line-height: 38px;
+    font-size: 15px;
+    text-align: center;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s ease-in-out;
+    vertical-align: bottom;
+  }
+
+  p.social a:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+
+  }
+
+  p.social a i {
+    vertical-align: bottom;
+    line-height: 38px;
+  }
+
+  p.social a i:hover {
+    cursor: pointer;
+  }
+
+  /*
+  --------
+  About me
+  --------
+  */
+  
+  .aboutText {
+    font-size: 23px;
+  }
+  
+
+  /* 
+  ----------
+  Portifolio
+  ----------
+  */
+
+  .gridContainer {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    display: grid;
+    grid-auto-flow: dense;
+    grid-template: "1fr 1fr 1fr 1fr 1fr" 300px
+                   "1fr 1fr 1fr 1fr 1fr" 300px
+                   "1fr 1fr 1fr 1fr 1fr" 300px
+                   "1fr 1fr 1fr 1fr 1fr" 300px;
+    grid-gap: 0px;
+  }
+
+
+  .gridBox {
+    position: relative;
+  }
+
+  .b,
+  .g,
+  .i {
+    grid-row: span 2;
+  }
+
+ 
+  .b,
+  .c,
+  .g,
+  .h {
+    grid-column: span 2;
+  }
+
+  .gridImg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .gridImg:hover {
+    cursor: pointer;
+    transform: scale(0.9);
+    opacity: 0.8;
+  }
+
+  /* Responsive */
+  @media ( max-width: 500px) {
+    .gridContainer {
+      grid-template: "1fr 1fr" 100px
+                     "1fr 1fr" 100px
+                     "1fr 1fr" 100px
+                     "1fr 1fr" 100px
+                     "1fr 1fr" 100px
+                     "1fr 1fr" 100px
+                     "1fr 1fr" 100px; 
+    }
+  }
+
+  /* Ipad */
+  @media ( max-width: 940px) {
+    .gridContainer {
+      grid-template: "1fr 1fr 1fr" 250px
+                     "1fr 1fr 1fr" 250px
+                     "1fr 1fr 1fr" 250px
+                     "1fr 1fr 1fr" 250px
+                     "1fr 1fr 1fr" 250px
+                     "1fr 1fr 1fr" 250px
+                     "1fr 1fr 1fr" 250px; 
+    }
+    .k {
+      grid-column: span 2;
+    }
+
+  }
+
+  /* iPhone X*/
+  @media ( max-width: 375px) {
+    .gridContainer {
+      grid-template: "1fr 1fr" 150px
+                     "1fr 1fr" 150px
+                     "1fr 1fr" 150px
+                     "1fr 1fr" 150px
+                     "1fr 1fr" 150px
+                     "1fr 1fr" 150px
+                     "1fr 1fr" 150px
+                     "1fr 1fr" 150px
+                     "1fr 1fr" 150px
+                     "1fr 1fr" 150px; 
+    }
+    .j {
+      grid-row: span 2;
+    }
+  }
+  
+
+  /*
+  ----------
+  Makeup img
+  ----------
+  */
+
+  .responsive {
+    width: 100%;
+    height: auto;
+  }
+
+  .makeupImg {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    background-color: #111;
+    padding: 0;
+    background-size: cover;
+    background-position: center center;
+    overflow: hidden;
+    background-attachment: fixed;
+  }
+
+
+  /*
+  ------
+  Offers
+  ------
+  */
+
+  .offersGrid {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    display: grid;
+    grid-auto-flow: dense;
+    grid-template: "1fr 1fr" 700px
+                   "1fr 1fr" 700px
+                   "1fr 1fr" 700px;
+    grid-row-gap: 10px;
+  }
+
+
+  .oGridBox {
+    position: relative;
+    background-color: #ffffff;
+  }
+
+  .gridTxt {
+    
+    width: 320px;
+    height: 320px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+
+  .gridImg2 {
+
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 70%;
+    height: 70%;
+    box-shadow: #e6e6e6 1px 1px 1px 1px;
+    transition: all 0.5s ease-in-out;
+  }
+
+  /* Responsive */
+  @media ( max-width: 500px) {
+    .offersgrid {
+      grid-template: "1fr" 200px
+                     "1fr" 200px
+                     "1fr" 200px
+                     "1fr" 200px
+                     "1fr" 200px
+                     "1fr" 200px
+                     "1fr" 200px; 
+    }
+
+    .gridTxt {
+      height: auto;
+      width: auto;
+    }
+  }
+
+  /* iPhone X*/
+  @media ( max-width: 375px) {
+    .offersGrid {
+      grid-template: "1fr" 300px
+                     "1fr" 300px
+                     "1fr" 300px
+                     "1fr" 300px
+                     "1fr" 300px
+                     "1fr" 300px
+                     "1fr" 300px;
+    }
+    
+  }
+
+  
+
+  /*
+  ------
+  Contact
+  ------
+  */
+
+  .contact-form {
+    margin-bottom: 40px;
+  }
+
+  .submitBtn {
+    width: 20%;
+    background-color: #e7a399;
+    border: none;
+    color: black;
+  }
+
+  .submitBtn:hover {
+    background-color: #e6a399;
+  }
+
+  .contactImg {
+    margin-top: 30px;
+    margin-left: 20px;
+  }
+
+  input {
+    border-color: 1px solid #e7a399;
+  }
+
+  textarea {
+    border-color: 1px solid #e7a399;
+  }
+
+  /*
+  ------
+  Footer
+  ------
+  */
+
+  .footer {
+    color: #fff;
+    background: #090302;
+  }
+
+  .footer-link {
+    color: #e7a399;
+  }
+
+  .footer-link:hover {
+    color: #e6a399;
+  }
+
+  
+
+  
