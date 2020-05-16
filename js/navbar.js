@@ -1,35 +1,31 @@
-$(function () {
+// Make navbar sticky after intro img
+$(window).scroll(function(){
+    if($(this).scrollTop()>400) {
+        $('.navbar').addClass('sticky');
+    } else {
+        $('.navbar').removeClass('sticky');
+    }
+}) 
 
-    // ---------------------------------------------- //
-    // Navbar
-    // ---------------------------------------------- //
 
-    $(document).scroll(function () {
-        if ($(window).scrollTop() >= $('header').offset().top) {
-            $('nav').addClass('sticky');
+// Navbar li scrolleffect
+let scroll = new SmoothScroll('a[href*="#"]');
+
+
+// Nav-link active
+//Making class active by scrolling past it
+$(window).scroll(function(){
+    var scrollTop = $(document).scrollTop();
+    var anchors = $('body').find('.anchor');
+    for (var i = 0; i < anchors.length; i++){
+        if (scrollTop > $(anchors[i]).offset().top - 50 && scrollTop < $(anchors[i]).offset().top + $(anchors[i]).height() - 50) {
+            $(anchors[i]).addClass('active');
         } else {
-            $('nav').removeClass('sticky');
+            $(anchors[i]).removeClass('active');
         }
-    });
+    }
+});
 
 
-    // ---------------------------------------------- //
-    // Scroll Spy
-    // ---------------------------------------------- //
 
-    $('body').scrollspy({
-        target: '.navbar',
-        offset: 80
-    });
 
-    // ---------------------------------------------- //
-    // Preventing URL update on navigation link click
-    // ---------------------------------------------- //
-
-    $('.navbar-nav a, #scroll-down').bind('click', function (e) {
-        var anchor = $(this);
-        $('html, body').stop().animate({
-            scrollTop: $(anchor.attr('href')).offset().top
-        }, 1000);
-        e.preventDefault();
-    });
